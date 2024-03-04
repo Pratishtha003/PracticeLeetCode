@@ -1,0 +1,13 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+    int writeIndex = 0;
+    for (int num : nums) {
+        if (num != 0) {
+            nums[writeIndex++] = num; // Place non-zero elements at the beginning
+        }
+    }
+    while (writeIndex < nums.length) {
+        nums[writeIndex++] = 0; // Fill remaining elements with zeros
+    }
+    }
+}
